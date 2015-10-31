@@ -5,10 +5,8 @@
 </p>
 
 ## clone
-    ```console
     $cd
     git clone https://github.com/rukah/dotfiles.git  
-    ```
 
 ## 初期設定
 mkdir swap    
