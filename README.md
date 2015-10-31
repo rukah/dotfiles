@@ -5,8 +5,10 @@
 </p>
 
 ## clone
-cd  
-git clone https://github.com/rukah/dotfiles.git  
+    ```console
+    $cd
+    git clone https://github.com/rukah/dotfiles.git  
+    ```
 
 ## 初期設定
 mkdir swap    
@@ -23,4 +25,4 @@ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 ## その他設定
 ### g c でgit commit
-git config --global alias.c 'commit -v'    
+git config --global alias.c 'commit -v'
