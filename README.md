@@ -17,10 +17,10 @@
     $ ln -sf ~/dotfiles/.bash_profile ~/.bash_profile    
 
 ## NeoBundle install
-    git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim  
+    $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim  
 
-## vim 起動してプラグイン更新
+vim 起動してプラグイン更新    
 
 ## その他設定
 ### g c でgit commit
-    git config --global alias.c 'commit -v'
+    $ git config --global alias.c 'commit -v'
