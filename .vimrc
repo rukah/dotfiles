@@ -40,6 +40,9 @@ NeoBundle 'scrooloose/nerdtree'
 " カラースキーマ Desert
 NeoBundle 'vim-scripts/desert.vim'
 
+" Twitter
+NeoBundle 'TwitVim'
+
 call neobundle#end()
 
 NeoBundleCheck
@@ -192,6 +195,9 @@ set wildmenu
 " C-L: ハイライト解除
 nnoremap <C-L> :nohl<CR><C-L>
 
+" <Leader>を<Space>に変更
+let mapleader = "\<Space>"
+
 " ,,: コメントトグル with NERDCommenter
 let NERDSpaceDelims = 1
 nmap ,, <plug>NERDCommenterToggle
@@ -203,4 +209,9 @@ nnoremap <silent>,is :VimShell<CR>
 " C-e: NERDTreeトグル
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+" TwitVim
+nnoremap <space>po :<C-u>PosttoTwitter<Enter>
+nnoremap <space>fr :<C-u>FriendsTwitter<Enter>
+nnoremap <space>re :<C-u>MentionsTwitter<Enter>
+nnoremap <space>ff :<C-u>ListTwitter ff11-friends<Enter>
 
