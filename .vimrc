@@ -39,6 +39,8 @@ NeoBundle 'vim-scripts/AutoComplPop'
 NeoBundle 'scrooloose/nerdtree'
 " カラースキーマ Desert
 NeoBundle 'vim-scripts/desert.vim'
+" キーマッピング
+NeoBundle "terryma/vim-expand-region"
 
 " Twitter
 NeoBundle 'TwitVim'
@@ -192,11 +194,18 @@ set wildmenu
 "--------------------------------------------"
 " キーマッピング
 "--------------------------------------------"
+" <Leader>を<Space>に変更
+let mapleader = "\<Space>"
+
 " C-L: ハイライト解除
 nnoremap <C-L> :nohl<CR><C-L>
 
-" <Leader>を<Space>に変更
-let mapleader = "\<Space>"
+" <Space><Space>: ビジュアルラインモード
+nmap <Space><Space> V
+
+" v を押すたび拡大選択, <C-v>で戻す
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " ,,: コメントトグル with NERDCommenter
 let NERDSpaceDelims = 1
