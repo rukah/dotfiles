@@ -29,6 +29,8 @@ NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 " Sassシンタックス
 NeoBundle 'cakebaker/scss-syntax.vim'
+" emmet-vim
+NeoBundle 'mattn/emmet-vim'
 " コメントアウト
 NeoBundle 'scrooloose/nerdcommenter'
 " 閉じ括弧を自動化
@@ -223,4 +225,12 @@ nnoremap <space>po :<C-u>PosttoTwitter<Enter>
 nnoremap <space>fr :<C-u>FriendsTwitter<Enter>
 nnoremap <space>re :<C-u>MentionsTwitter<Enter>
 nnoremap <space>ff :<C-u>ListTwitter ff11-friends<Enter>
+
+" !展開の言語設定 with emmet-vim
+let g:user_emmet_settings = {
+\   'variables': {
+\       'lang': 'ja',
+\       'charset': 'utf-8'
+\   },
+\}
 
