@@ -1,5 +1,7 @@
 # dotfiles 自分用メモ
 
+![Cirno](https://raw.githubusercontent.com/rukah/rakugaki/6f332cbaa06c762e9989024ec2e75e29b20fe27a/cirno1.png)
+
 ## clone
 cd  
 git clone https://github.com/rukah/dotfiles.git  
