@@ -227,6 +227,7 @@ nnoremap <space>fr :<C-u>FriendsTwitter<Enter>
 nnoremap <space>re :<C-u>MentionsTwitter<Enter>
 nnoremap <space>nn :<C-u>NextTwitter<Enter>
 nnoremap <space>pp :<C-u>PreviousTwitter<Enter>
+nnoremap <space>st :<C-u>SearchTwitter<Enter>
 nnoremap <space>.  :<C-u>RefreshTwitter<Enter>
 nnoremap <space>ff :<C-u>ListTwitter ff<Enter>
 
