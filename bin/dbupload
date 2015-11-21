@@ -26,5 +26,5 @@ config=/var/www/html/${sitename}/config/dbupload.conf
 mysqldump -u root $DBNAME > ${BACKUPDIR}${DBNAME}_dump.sql
 
 # upload
-rsync -av $BACKUPDIR ${sitename}:${HOSTNAME}/backup/ --delete
+rsync -av $BACKUPDIR ${sitename}:${HOSTNAME}/backup/
 
