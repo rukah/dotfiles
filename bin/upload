@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# [自分用]
+#
+# 説明
+#   ローカルサーバとリモートサーバを同期
+#   現在の位置からアップロードする場所を判断してrsyncするだけ
+#
+# 設定ファイル
+#   /var/www/html/${sitename}/config/upload.conf
+#
+#   サイト毎の設定ファイルにはこんな感じに条件を設定しておく
+#   exclude=(
+#   '--exclude="admin"'
+#   '--exclude="test"'
+#   )
+#   
+# 書式
+#   upload
+#
+
+sitename=`pwd`
+sitename=${sitename##/var/www/html/}
+sitename=${sitename%%/*}
+
+config=/var/www/html/${sitename}/config/upload.conf
+. $config
+
+command="rsync -av --delete /var/www/html/${sitename}/web/ ${sitename}:${sitename}/public_html/ ${exclude[@]}"
+
+eval ${command}

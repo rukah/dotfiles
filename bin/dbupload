@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# [自分用]
+#
+# 説明
+#   ローカルサーバとリモートサーバのデータベースを同期
+#   現在の位置からアップロードする場所を判断してrsyncするだけ
+#   サーバ側では手動またはcronで更新
+#
+# 設定ファイル
+#   /var/www/html/${sitename}/config/dbupload.conf
+#   サイト毎の設定ファイルに変数を設定しておく
+#   
+# 書式
+#   dbupload
+#
+
+sitename=`pwd`
+sitename=${sitename##/var/www/html/}
+sitename=${sitename%%/*}
+
+config=/var/www/html/${sitename}/config/dbupload.conf
+. $config
+
+# backup
+mysqldump -u root $DBNAME > ${BACKUPDIR}${DBNAME}_dump.sql
+
+# upload
+rsync -av $BACKUPDIR ${sitename}:${HOSTNAME}/backup/ --delete
+
