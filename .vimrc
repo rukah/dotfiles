@@ -142,11 +142,11 @@ highlight StatusLine term=NONE cterm=NONE ctermfg=black ctermbg=white
 " オートインデントを有効にする
 set autoindent
 " タブが対応する空白の数
-set tabstop=4
+set tabstop=2
 " タブやバックスペース等の操作時にタブが対応する空白の数
-set softtabstop=4
+set softtabstop=2
 " インデントの各段階に使われる空白の数
-set shiftwidth=4
+set shiftwidth=2
 " タブを挿入するときに代わりに空白を使わない
 set noexpandtab
 " 空白を挿入する時に適切な空白を使う
@@ -230,6 +230,10 @@ nnoremap <space>pp :<C-u>PreviousTwitter<Enter>
 nnoremap <space>st :<C-u>SearchTwitter<Enter>
 nnoremap <space>.  :<C-u>RefreshTwitter<Enter>
 nnoremap <space>ff :<C-u>ListTwitter ff<Enter>
+" リプライ（返信） <Space>r
+" お気に入り登録   <Space>f
+" ツイートした人のツイート一覧  <Space>g
+" ツイートした人のプロフィール  <Space>p
 
 " !展開の言語設定 with emmet-vim
 let g:user_emmet_settings = {
