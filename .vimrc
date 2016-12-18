@@ -190,8 +190,10 @@ endif
 set hidden
 " 起動時のメッセージを表示しない
 set shortmess+=I
-" 補完候補を表示する
-set wildmenu
+" 分割窓は下に表示
+set splitbelow
+" 分割窓は右に表示
+set splitright
 
 "--------------------------------------------"
 " キーマッピング
@@ -215,7 +217,7 @@ nmap ,, <plug>NERDCommenterToggle
 vmap ,, <plug>NERDCommenterToggle
 
 " ,is: シェルを起動 with VimShell
-nnoremap <silent>,is :VimShell<CR>
+nnoremap <silent>,is :VimShellPop<CR>
 
 " C-e: NERDTreeトグル
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
