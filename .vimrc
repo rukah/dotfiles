@@ -24,11 +24,13 @@ NeoBundle 'Shougo/vimshell'
 " 総合ユーザインターフェース
 NeoBundle 'Shougo/unite.vim'
 " HTML5シンタックス
-NeoBundle 'taichouchou2/html5.vim'
+" NeoBundle 'taichouchou2/html5.vim'
 " CSS3シンタックス
 NeoBundle 'hail2u/vim-css3-syntax'
 " Sassシンタックス
 NeoBundle 'cakebaker/scss-syntax.vim'
+" PHPスニペット補完
+" NeoBundle 'Shougo/neosnippet.vim'
 " emmet-vim
 NeoBundle 'mattn/emmet-vim'
 " コメントアウト
@@ -114,7 +116,7 @@ set showmatch
 " 対応する括弧の表示時間を2にする
 set matchtime=2
 " シンタックスハイライトを有効にする
-"syntax on
+syntax on
 " 検索結果文字列のハイライトを有効にする
 set hlsearch
 " コメント文の色を変更
